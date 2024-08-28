@@ -1,74 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- impport font Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- impport font Montserrat -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+    <!-- import font Bodoni Moda -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            montserrat: ["Montserrat", "sans-serif"],
-          },
-          colors: {
-            cor1: "#EEF2F6",
-            cor2: "#496C7B",
+    <!-- import tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              montserrat: ["Montserrat", "sans-serif"],
+              fontFamily: {
+                bodoni: ["Bodoni Moda", "serif"],
+              },
+            },
+            colors: {
+              white: "#FFFFFF",
+              gelo: "#EEF2F6",
+              blue: "#496C7B",
+              dark_blue: "#0B0F16",
+              gray: "#57606D",
+            },
           },
         },
-      },
-    };
-  </script>
+      };
+    </script>
 
-  <!-- import tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <title>La condamine</title>
+  </head>
 
-  <title>La condamine</title>
-</head>
+  <body class="font-['montserrat'] max-w-full bg-gelo">
+    <div class="mx-auto bg-gelo">
+      <!-- barra de navegaçao -->
+      <nav class="flex justify-between mx-10 bg-gelo text-sm font-semibold">
+        <img src="img/img_index/logo.png" class="w-20 ml-0" />
+        <h3 class="font-['bodoni'] font-extralight">Azure</h3>
 
-<body class="font-['montserrat']">
-  <div class="lg:container mx-auto bg-[#EEF2F6]">
+        <div class="nav flex gap-9 my-auto text-blue uppercase">
+          <a class="hover:text-[#88A4B2] hover:underline" href="#">Home</a>
+          <a class="hover:text-[#88A4B2] hover:underline" href="#">Destinos</a>
+          <a class="hover:text-[#88A4B2] hover:underline" href="#">Sobre Nós</a>
+          <a class="hover:text-[#88A4B2] hover:underline" href="#">Contato</a>
+        </div>
+      </nav>
 
-    <!-- barra de navegaçao -->
-    <nav class="flex justify-between mx-10 bg-[#EEF2F6] text-sm font-semibold">
+      <!-- principal -->
+      <div class="principal w-full">
+        <img
+          src="img/img_index/imagem_principal.jpg"
+          class="w-auto object-cover relative brightness-50"
+        />
 
-      <img src="img/img_index/logo.png" class="w-20 ml-0" />
-      <h3>La Condamine</h3>
+        <div
+          class="textos_principal w-1/5 absolute bottom-24 left-36 text-white text-left my-96"
+        >
+          <h3 class="text-base uppercase">Mônaco</h3>
+          <h1 class="text-5xl">Crie <b>seu roteiro</b></h1>
+          <h4 class="text-base">
+            Mônaco é o destino ideal para quem busca praias paradisíacas
+            banhadas pelo Mediterrâneo, muita arte e cultura, além de festas e
+            estabelecimentos luxuosos.
+          </h4>
 
-      <div class="nav flex gap-9 my-auto text-[#496C7B] uppercase">
-
-        <a class="hover:text-[#0B0F16] hover:underline" href="#">Home</a>
-        <a class="hover:text-[#0B0F16] hover:underline" href="#">Destinos</a>
-        <a class="hover:text-[#0B0F16] hover:underline" href="#">Sobre Nós</a>
-        <a class="hover:text-[#0B0F16] hover:underline" href="#">Contato</a>
-
-      </div>
-    </nav>
-
-    <!-- principal -->
-    <div class="principal w-full">
-
-      <img src="img/img_index/imagem_principal.jpg" class="w-auto object-cover relative brightness-50" />
-
-      <div class="textos_principal w-2/5 absolute bottom-24 left-36 text-[#FFFFFF] text-left my-96">
-
-        <h3 class="text-base uppercase">Mônaco</h3>
-        <h1 class="text-5xl">Crie <b>seu roteiro</b></h1>
-        <h4 class="text-sm"> Mônaco é o destino ideal para quem busca praias paradisíacas banhadas pelo Mediterrâneo, muita arte e cultura, além de festas e estabelecimentos luxuosos.
-        </h4>
-
-        <button class="bg-[#EEF2F6] text-[#496C7B] font-bold text-sm my-5 p-1.5 rounded-sm">Reserve Aqui</button>
-
+          <button
+            class="bg-gelo text-blue font-bold text-base my-5 p-1.5 rounded-sm">Reserve Aqui</button>
+        </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
